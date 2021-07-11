@@ -25,7 +25,10 @@ function Menu() {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a
+              class="nav-link"
+              href="#"
+            >
               Salud Alimenticia
             </a>
           </li>
@@ -34,6 +37,14 @@ function Menu() {
               Ejercicio
             </a>
           </li>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="btn btn-primary me-md-2" type="button">
+              Iniciar Sesion
+            </button>
+            <button class="btn btn-primary" type="button">
+              Registrarse
+            </button>
+          </div>
         </ul>
       </div>
     </nav>

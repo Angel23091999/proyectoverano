@@ -1,14 +1,19 @@
 import React from "react";
-import Menu from "../Componentes/opcionMenu/Menu";
-import CarrouselInicio from '../Componentes/Carrousel/CarrouselInicio';
+import Menu from "../Components/opcionMenu/Menu";
+import CarrouselInicio from '../Components/carrousel/CarrouselInicio';
+import Informacion from '../Components/datos/Informacion';
 //import FormDatos from '../Componentes/FormDatos';
 
 function Home() {
   return (
     <div>
-      <Menu />
+      <Menu/>
+      <hr></hr>
       <CarrouselInicio/>
+      <hr></hr>
+      <Informacion/>
     </div>
   )
 }
 export default Home;
+
