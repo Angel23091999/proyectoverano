@@ -12,6 +12,7 @@ function Home() {
       <CarrouselInicio/>
       <hr></hr>
       <Informacion/>
+      <hr></hr>
     </div>
   )
 }
