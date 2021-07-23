@@ -1,0 +1,15 @@
+div.img1 img.derecha {
+  float: right;
+  margin-left: 15px;
+}
+div.img2 img.derecha {
+  float: right;
+  margin-left: 15px;
+}
+
+h2 {
+  text-align: center;
+}
+p {
+  text-align: justify;
+}

@@ -1,0 +1,18 @@
+div.noticia img.derecha {
+  float: right;
+  margin-left: 15px;
+}
+
+div.noticia1 img.derecha {
+  float: right;
+  margin-left: 15px;
+}
+
+div.noticia2 img.derecha1 {
+  float: right;
+  margin-left: 15px;
+}
+
+div.noticia1 p {
+  text-align: justify;
+}

@@ -1,23 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Login from "../Login";
-import Logaut from "../Logaut";
+import Login from "../Login/Login";
+import Logaut from "../Logaut/Logaut";
 import { useAuth0 } from "@auth0/auth0-react";
+import './Header.css'
 
 function Menu() {
-  const { isAuthenticated } = useAuth0();
-
-  const { isLoading } = useAuth0();
-
+  const { isAuthenticated, isLoading } = useAuth0();
   if (isLoading) {
     return <div>Loading ...</div>;
   }
-
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand">IMApp</a>
+          <p>IMApp</p>
           <button
             class="navbar-toggler"
             type="button"
@@ -31,35 +28,46 @@ function Menu() {
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page">
-                  <Link to="/">Home</Link>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active">
-                  <Link to="/Ejercicio">Salud Alimenticia</Link>
-                </a>
-              </li>
+              <button type="button" class="btn btn-danger">
+                <Link
+                  class="nav-link active"
+                  aria-current="page"
+                  to="/"
+                >
+                  Home
+                </Link>
+              </button>
               {isAuthenticated ? (
                 <>
-                  <li class="nav-item">
-                    <a class="nav-link active">
-                      <Link to="/Ejercicio">Ejercicio</Link>
-                    </a>
+                  <button type="button" class="btn btn-danger">
+                    <Link class="nav-link active" to="/Salud">
+                      Salud Alimenticia
+                    </Link>
+                  </button>
+                  <li type="button" class="btn btn-danger">
+                    <Link class="nav-link active" to="/Ejercicio">
+                      Ejercicio
+                    </Link>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link active">
+                  <li type="button" class="btn btn-danger">
+                    <Link class="nav-link active" to="/Funcion">
+                      Calcular IMC
+                    </Link>
+                  </li>
+                  <li type="button" class="btn btn-danger">
+                    <p>
                       <Logaut />
-                    </a>
+                    </p>
                   </li>
                 </>
               ) : (
-                <li class="nav-item">
-                  <a class="nav-link active">
-                    <Login />
-                  </a>
-                </li>
+                <div class="position-relative">
+                  <li type="button" class="btn btn-danger">
+                    <p>
+                      <Login />
+                    </p>
+                  </li>
+                </div>
               )}
             </ul>
           </div>

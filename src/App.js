@@ -1,9 +1,12 @@
 import React from "react";
-import Formulario from "./Components/Formulario/Formulario";
+import Formulario from "./Components/Formulario";
 import Home from './Components/Home/Home'
 import Header from './Components/Header/Header'
-import Login from './Components/Login'
-import Logaut from './Components/Logaut'
+import Login from './Components/Login/Login'
+import Logaut from './Components/Logaut/Logaut'
+import Salud from './Components/SaludAlimenticia/Salud'
+import Ejercicio from './Components/Ejercicio/Ejercicio'
+import Funcion from './Components/Funcion/Funcion2'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -14,9 +17,12 @@ function App() {
       <hr></hr>
         <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/Formulario" component={Formulario} />
-        <Route exact path="/Login" component={Login} />
-        <Route exact path="/Logaut" component={Logaut} />
+        <Route path="/Formulario" component={Formulario} />
+        <Route  path="/Login" component={Login} />
+        <Route path="/Logaut" component={Logaut} />
+        <Route path="/Salud" component={Salud}/>
+        <Route path="/Ejercicio" component={Ejercicio}/>
+        <Route path="/Funcion" component={Funcion} />
         </Switch>
       </Router>
     </div>

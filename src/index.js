@@ -4,15 +4,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import { Auth0Provider } from "@auth0/auth0-react";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-      domain="angel-geronimo.us.auth0.com"
-      clientId="18UQKKJyIcK8eR4wewJD0qTS3HVpGHzl"
+      domain="angel-09.us.auth0.com"
+      clientId="xY4MUZy5rZugFpyI0zB3mokGGHxiBPPH"
       redirectUri={window.location.origin}
     >
       <App />
